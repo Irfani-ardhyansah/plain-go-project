@@ -1,0 +1,54 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Category Restful API",
+        "description": "API Spec for Category Restful API",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url":  "http://localhost:3000/api" 
+        }
+    ],
+    "paths": {
+        "/categories": {
+            "get": {
+                "description": "list All Categories",
+                "response": {
+                    "200": {
+                        "description": "Success get all categories",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "number"
+                                        },
+                                        "status": {
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "number"
+                                                    },
+                                                    "name": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
